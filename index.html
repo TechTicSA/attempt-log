@@ -282,19 +282,19 @@
 
         function handleOtpSubmit() {
             const otp = ui.otpInput.value.trim();
-
+        
             if (otp !== "123456") {
-                showToast("Invalid Token. Try 123456");
+                showToast("Invalid Token");
                 return;
             }
-
+        
             setLoading(2, true);
-
+        
             setTimeout(() => {
-                // Success - Redirect to the Attempt Log System (The Dashboard)
-                window.location.href = "https://techticsa.github.io/attempt-log/logs";
+                window.location.assign("https://techticsa.github.io/attempt-log/logs/");
             }, 1500);
         }
+
 
         function switchView(viewId) {
             ui.stepEmail.style.display = 'none';
